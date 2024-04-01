@@ -1,3 +1,12 @@
+## Version: 1.2.5-dev-24-g494ff3f
+* Following a [suggestion](https://github.com/mikebrady/nqptp/issues/33) by [Jörn Nettingsmeier](https://github.com/nettings), use the `DynamicUser` facility provided by `systemd` to define the system user needed to run the NQPTP daemon. Many thanks to them. New installations will use this arrangement.
+  Optionally, if you wish to use it on an existing installation:
+  ```
+  # rm /usr/local/lib/systemd/system/nqptp.service
+  # systemctl daemon-reload
+  ```
+  before building and installing NQPTP.  
+
 ## Version: 1.2.5-dev-18-gb8384c4
 * Documentation fix. Thanks to [Rudi Heitbaum](https://github.com/heitbaum) for a documentation fix in [PR 34](https://github.com/mikebrady/nqptp/pull/34).
 ## Version: 1.2.5-dev-16-g32bfe78
