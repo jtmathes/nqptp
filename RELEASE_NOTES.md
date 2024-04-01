@@ -1,5 +1,11 @@
-## Version: 1.2.5
-* Stop using `setcap` on the `nqptp` binary at install time and instead use `systemd` `AmbientCapabilities` to give the `nqptp` daemon the capability to access ports 319 and 320. Many thanks to [Hs_Yeah](https://github.com/Hs-Yeah) for the [PR](https://github.com/mikebrady/nqptp/pull/26).
+## Version: 1.2.5-dev-18-gb8384c4
+* Documentation fix. Thanks to [Rudi Heitbaum](https://github.com/heitbaum) for a documentation fix in [PR 34](https://github.com/mikebrady/nqptp/pull/34).
+## Version: 1.2.5-dev-16-g32bfe78
+* OpenBSD compatibility, thanks to the work of [Klemens Nanni](https://github.com/klemensn) in [PR 31](https://github.com/mikebrady/nqptp/pull/31). This work includes: using OpenBSD's `pledge(2)` facilities to harden the security of NQPTP, dropping priviliges as soon as possible, and running as the same user as the Shairport Sync application. (Note that at present on Linux, NQPTP runs as the user `nqptp` while Shairport Sync runs as the user `shairport-sync`. For consistency, this may change in future.)  
+## Version: 1.2.5-dev-5-g475d7a1
+* Fixup for FreeBSD compilation error -- change the order of some of the `#include` files.
+## Version: 1.2.5-dev-2-gb5321a8
+* Stop using `setcap` on the `nqptp` binary at install time and instead use systemd's AmbientCapabilities to give the `nqptp` daemon the capability to access ports 319 and 320. Many thanks to [Hs_Yeah](https://github.com/Hs-Yeah) for the [PR](https://github.com/mikebrady/nqptp/pull/26).
 * Improve some error messages.
 * Update a few documentation errors.
 * Fix some compilation errors on FreeBSD. Thanks to [Emanuel Haupt](https://github.com/ehaupt) who also discovered these errors and proposed a fix.
