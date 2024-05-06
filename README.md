@@ -90,14 +90,14 @@ If you are installing `nqptp` for the first time, add an automatic startup entry
    ```
 If Shairport Sync is already running, you should you restart it after starting `nqptp`:
 ```
-# service shairport_sync restart
+# service shairport-sync restart
 ```
 
 ##### Update
 If you are updating an existing installation of `nqptp`, after installing it you should restart it. You should then also restart Shairport Sync:
 ```
 # service nqptp restart
-# service shairport_sync restart
+# service shairport-sync restart
 ```
 
 ## Firewall
